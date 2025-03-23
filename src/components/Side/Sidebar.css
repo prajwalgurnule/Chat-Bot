@@ -1,0 +1,94 @@
+.Sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--sidebar-bg);
+    padding: 25px 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.Sidebar img {
+    width: 20px;
+}
+
+.Sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.Sidebar .new-chat {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.Sidebar .new-chat:hover {
+    background-color: var(--hover-bg);
+}
+
+.Sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.8s;
+}
+
+.Sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.Sidebar .recent-entry {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.Sidebar .recent-entry:hover {
+    background-color: var(--hover-bg);
+}
+
+.Sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.Sidebar .bottom-item {
+    padding-right: 10px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+    .Sidebar {
+        display: none;
+    }
+}
+
+/* Default Light Mode */
+:root {
+    --sidebar-bg: #a3afbe;
+    --text-color: #282828;
+    --hover-bg: #e2e6eb;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --sidebar-bg: #2b2b2b;
+    --text-color: #ffffff;
+    --hover-bg: #3d3d3d;
+}
